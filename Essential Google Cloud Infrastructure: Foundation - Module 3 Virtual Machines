@@ -1,1 +1,41 @@
+Compute Engine:
+================
+Predefine or Custom Machine types:
 
+-> vCPUs(cores) and Memory(RAM)
+
+Storage:
+=======
+-> Zonal or regional persistent disk(HDD or SSD)
+-> Local SSD
+-> Cloud Storage
+
+Disks:
+======
+-> Standard, SSD or Local SSD
+-> Resize disks or migrate instances with no downtime.
+
+===========================================================
+VM LifeCycle:
+============
+
+   Provisioning ---->   Staging     -----> Running -------> Stopping
+
+-> vCPUS + memory.      IP addr           Startup           Shutdown 
+                        internal(VPC)     Script
+                        external
+
+-> Root disk            System image      Access SSH|RDP
+                        (Cloud storage)
+   Persistent Disk
+
+-> Additional Disks     Boot              Modify Use
+
+Shutdown requires on following actions:
+========================================
+* If we want to upgrade the CPU resources.
+
+Charges for stopped(terminated) VMs:
+=====================================
+* No need to pay for Memory and CPU resources
+* Pay for the Attached disks and Reserved IP addresses.
