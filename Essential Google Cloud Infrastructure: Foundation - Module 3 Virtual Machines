@@ -39,3 +39,34 @@ Charges for stopped(terminated) VMs:
 =====================================
 * No need to pay for Memory and CPU resources
 * Pay for the Attached disks and Reserved IP addresses.
+
+Compute Engine Machine families:
+-> General Purpose (Series E2 and N)
+   * E2 Series - Sharedcored  
+   * Workload cost optimized Day to day computing at a lower cost
+   * Suits for the applications ex: Web serving, App serving, Back off apps, Small-medium databases, Microservices, Virtual Desktops, Development envs
+   * N2, N2D, N1 - Balanced price/performance across a wide range of VM shapes
+-> Compute optimized (C2 - Series)
+   * Compute intensive workloads
+   * Per core licensing
+   Applications:
+   * Gaming (AAA Game servers)
+   * AI/ML
+   * Ad Serving
+   * Media transcoding
+   C2-D Series:
+   * Ultra high performace for compute intensive workloads
+   Apps:
+   * Memory-bound workloads
+   * Electronic Design Automation (EDA)   
+-> Memory optimized (M1, M2 series)
+   M1:
+    * Ultra high memory workloads upto 4TB of memory
+   Apps:
+    * Medium in-memory databases such as SAP HANA
+   M2:
+    * Ultra high memory workloads upto 12TB of memory
+   Apps:
+    * Large in-memory databases such as SAP HANA
+-> Accelerator optimized
+
