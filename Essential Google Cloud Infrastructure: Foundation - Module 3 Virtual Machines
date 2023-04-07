@@ -68,5 +68,7 @@ Compute Engine Machine families:
     * Ultra high memory workloads upto 12TB of memory
    Apps:
     * Large in-memory databases such as SAP HANA
--> Accelerator optimized
+-> Accelerator optimized(A2)
+   Workload
+   
 
