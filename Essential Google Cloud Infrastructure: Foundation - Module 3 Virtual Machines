@@ -77,3 +77,21 @@ Pricing:
   -> vCPUs, GPUs, and GB memory
 * Resource-based pricing:
   -> Each vCPU and each GB billed separately
+
+Preemptible VM:
+===============
+* Lower price for interruptible service(upto 91%)
+* VM might be termintated at any time:
+  -> No charge if termintated for the first time
+  -> 24hrs max
+  -> 30-second terminate warning, but not guranteed
+* No live migrate; no auto restart
+Major use case: Batch processing
+
+SpotVMs:
+========
+* Spot VMS are the latest verison of preemptible VMs
+* Sport VMs and preemptible VMs share the same pricing model
+* No min or max run time
+* spot VMs are finite compute resources, so they might not be available all the times
+* no live migrate; no auto restart
