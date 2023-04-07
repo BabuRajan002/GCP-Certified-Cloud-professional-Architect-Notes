@@ -69,6 +69,11 @@ Compute Engine Machine families:
    Apps:
     * Large in-memory databases such as SAP HANA
 -> Accelerator optimized(A2)
-   Workload
+   Workload - Optimized for high performance computing workloads
    
-
+Pricing:
+========
+* Per second billing, with minimum of 1 minute
+  -> vCPUs, GPUs, and GB memory
+* Resource-based pricing:
+  -> Each vCPU and each GB billed separately
