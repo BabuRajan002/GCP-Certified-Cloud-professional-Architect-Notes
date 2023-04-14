@@ -95,3 +95,47 @@ SpotVMs:
 * No min or max run time
 * spot VMs are finite compute resources, so they might not be available all the times
 * no live migrate; no auto restart
+
+Disk Options:
+=============
+Persistent Disks:
+* Attached to a VM through the network interface
+* Durable storage: can survive VM terminate
+* bootable: you can attach to a VM and boot from it
+* snapshots: incremental backups
+* Performance : Scales with size
+* HDD (magnetic) or SSD (faster, solid-state)
+Zonal or Regional:
+pd-standard
+pd-ssd
+pd-balanced
+pd-extreme(zonal only)
+
+Maximum persistent Disks:
+=========================
+
+Machine Type               Disk number limit
+Shared-core                   16
+
+Standard                     
+High Memory    
+High-CPU                      128
+Memory-Optimized
+Compute-Optimized
+
+Move an instance to a new Zone:
+================================
+
+Automated process (Moving within region):
+-> gcloud compute instances move
+-> update references to VM; not automatic
+
+Manual process: (Moving between regions)
+-> Snapshot the source disks on the source VM
+-> Create a new persistent disks using this snapshot in the destination zone
+-> Create a new VM instance in the destination zone and attach the new persistent disks
+-> Assign the static IP to the VM
+-> Update the reference to the VM
+-> Delete the snapshots, original disks and original VM
+
+
