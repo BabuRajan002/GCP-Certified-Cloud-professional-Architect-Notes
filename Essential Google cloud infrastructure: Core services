@@ -1,1 +1,56 @@
+Organization Node:
+==================
+
+Organization roles:
+
+---> Org Admin: Controls over all cloud resources, useful for auditing
+---> Project Creator: Controls the project creation, control over who can create projects
+
+G-Suite or Cloud Identity:
+
+-> Orgnization will be created when a Google workspace (G-Suite) or cloud identity account creates a Google cloud project.
+
+Workspace or Cloud identity Super admin:
+
+-> Assign the org admin role to some users
+-> He is the point of contact in case of recovery issues
+-> controls entire lifecycle or cloud identity account organization resource
+
+Org Admin:
+
+-> Define the IAM policies
+-> Define the structure of the resource hierarchy
+-> Delegate the responsibilities of critical components such as networking, Billing and resource Hierarchy through IAM roles
+
+Folders:
+========
+
+-> Folders is the sub-division of Organization.
+-> It is a isolation of projects
+-> A folder can contain group of projects and sub-folders
+
+Roles:
+======
+
+There are three types of IAM roles:
+
+-> Basic
+   * Ownner
+   * Editor
+   * Viewer
+   * Billing administrator
+-> Predefined
+-> Custom
+   * Creating our own custom roles with set of permissions and it is not maintained by GCP, which means our custom roles will not be updated, 
+   modified and deleted automatically
+   
+   Members:
+   
+   There are Five types of members in GCP
+   1. Google account
+   2. Service Account
+   3. google group ---> Collection of users group and we can assign roles/permissions to that entire group.
+   4. Cloud Identity
+   5. Google workspace domain ---> Virtual group created for all the user accounts created in organization. 
+     
 
