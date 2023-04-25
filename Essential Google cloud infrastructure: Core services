@@ -53,4 +53,34 @@ There are three types of IAM roles:
    4. Cloud Identity
    5. Google workspace domain ---> Virtual group created for all the user accounts created in organization. 
      
+   IAM Policies:
+   -> IAM policies are allowed to who can access the which resources and what they can do.
+   -> IAM policies are made up of bindings, which are associations between one or more members (users, groups, and service accounts) and a role.
+   -> IAM policies can be applied at the project level, folder level, or resource level. 
+      When an IAM policy is applied at the project or folder level, it is inherited by all resources within that project or folder. 
+      This makes it easy to manage access to multiple resources at once.
+      
+   What if I already have a different corporate directory?
+   - Using Google cloud directory sync, It can able to map the users and groups in your existing directory service
+   
+   Service accounts:
+    - To enable the server-to-server communication
+    - Three types of service accounts:
+       * User-created custom
+       * built-in - Compute engines default service accounts
+       * Google APIs service account - Runs internal google processes on your behalf
+    
+    Default Compute engine service account:
+    - Automatically created per project with auto-generated name and email address:
+      - Name has -compute suffix
+    - Role is "project editor"
+    - by default its enabled on all instances creates using gcloud or google cloud console
+    
+    Identity Aware proxy:
+    ======================
+    
+    Enforces access control policies for applications and resources:
+    * Identity-bases access control
+    * Central authorization layer for applications accessed by HTTPS
+         
 
