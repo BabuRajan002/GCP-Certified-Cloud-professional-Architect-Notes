@@ -94,3 +94,22 @@ There are three types of IAM roles:
     Read < 1 per 30days? -----> Consider Nearline
     More often Read/write  ---> Standard
     
+    CloudSQL:
+    ==========
+    * HA Configuration
+    * Backup Service
+    * Import/export
+    * Scaling
+       -> Up: Machine Capacity
+       -> Out: Read replicas
+    Note: If you want to consider Horizontal Scalability we need to consider the Cloud Spanner
+    
+    Connecting to the CloudSQL:
+    ==========================
+    
+    -> CloudSQL Connection -----> Connecting within the Google cloud (Same Region) -----> Use Private IP (But this is just performance base recommendation)
+    -> CloudSQL Connection -----> Connecting from outside of Google cloud ----> Cloud SQL Auth proxy (Automated SSL rotations)
+    -> CloudSQL Connection -----> Connecting from outside of Google cloud  -----> Need manual COntrol over the SSL certs -----> Manual SSL Connection ----> Cannot use SSL ---> Authorized Networks
+    
+    
+    
