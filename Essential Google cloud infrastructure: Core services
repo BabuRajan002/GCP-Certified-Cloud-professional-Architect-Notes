@@ -83,4 +83,14 @@ There are three types of IAM roles:
     * Identity-bases access control
     * Central authorization layer for applications accessed by HTTPS
          
-
+    Cloud Storage:
+    ===============
+    
+    Choosing a storage class:
+    --------------------------
+    
+    Read < 1 Year ---> Consider Archive storage
+    Read < 1 per 90 days? ----> Consider coldline
+    Read < 1 per 30days? -----> Consider Nearline
+    More often Read/write  ---> Standard
+    
