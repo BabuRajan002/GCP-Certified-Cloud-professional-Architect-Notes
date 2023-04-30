@@ -111,5 +111,10 @@ There are three types of IAM roles:
     -> CloudSQL Connection -----> Connecting from outside of Google cloud ----> Cloud SQL Auth proxy (Automated SSL rotations)
     -> CloudSQL Connection -----> Connecting from outside of Google cloud  -----> Need manual COntrol over the SSL certs -----> Manual SSL Connection ----> Cannot use SSL ---> Authorized Networks
     
+    How to Make the decision for Data storage:
+    ==========================================
+    
+    Start ---> Do you need in Memory store with low latency ----> Memory Store ----> Is your data relational? ----> Is your workload analytics ? ---> Choose Bigquery ----> Work load not analytics and needs 99.999% availability ? -----> Cloud Spanner ---> CloudSQL   
+                  (Such as Gaming Apps)                      (Yes)              No                              yes                               Yes                                                                                 yes                   No
     
     
