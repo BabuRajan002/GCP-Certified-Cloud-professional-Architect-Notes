@@ -118,3 +118,30 @@ There are three types of IAM roles:
                   (Such as Gaming Apps)                      (Yes)              No                              yes                               Yes                                                                                 yes                   No
     
     
+    Cloud Spanner:
+    ==============
+    -> Cloud Spanner combines the benefits of relational databases strcture with non-relational horizontal scale
+       -> Provides High availability
+       -> Horizontally scalability
+       -> Automatic replication
+       -> Regional Redudandcy as well as Zone redundancy
+    
+    
+    Cloud Firestore:
+    ================
+    -> Suits for highly scalable no-sql database consider using Document DB called Cloud Firestore
+    -> Mobile apps, Web and IoT apps at glocbal scale
+    -> Live synchornization and offline support
+    -> Security features
+    
+    Cloud Bigtable:
+    ===============
+    -> Many of the google services uses this service like Analytics, search, gmail, Maps
+    -> Ideal for high throughput apps
+    -> such as Ad Tech, Fintech, and IoT
+    -> Storage engine for many ML apps
+    
+    
+    
+    
+    
