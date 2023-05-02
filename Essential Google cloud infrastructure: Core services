@@ -141,7 +141,18 @@ There are three types of IAM roles:
     -> such as Ad Tech, Fintech, and IoT
     -> Storage engine for many ML apps
     
+    Module2: Resource Manager:
+    ===========================
     
+    Resource hierarchy:
+    -------------------
+    -> Global
+    -> Regional
+    -> Zonal
     
+    Quotas:
+    =======
+    
+    How many resources you can create prject
     
     
