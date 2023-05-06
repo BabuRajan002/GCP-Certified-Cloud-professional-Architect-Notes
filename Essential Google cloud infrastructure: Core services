@@ -143,16 +143,26 @@ There are three types of IAM roles:
     
     Module2: Resource Manager:
     ===========================
-    
-    Resource hierarchy:
-    -------------------
-    -> Global
-    -> Regional
-    -> Zonal
+    -> A resource belongs to one and only project
+    -> Each project is associated with one billing account
+    -> Organization contains all the billing accounts
     
     Quotas:
     =======
     
-    How many resources you can create prject
+    Quotas defines the how many resources we can create per project
+     -> 15 VPC networks/project
+    How quickly we can make the API requests in a project: rate limits
+     -> 5 admin actions/second (cloud spanner)
+    How many resources you can create per region
+     -> 24 CPUs region/project
+     
+     increase: However we can increase the quota in the Google cloud consile or via support ticket
+     
+     Monitoring And Alerting:
+     =========================
+     
+     
+    
     
     
