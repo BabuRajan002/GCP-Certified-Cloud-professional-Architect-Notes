@@ -162,7 +162,20 @@ There are three types of IAM roles:
      Monitoring And Alerting:
      =========================
      
+     Google cloud operational suite:
      
+     -> It dynamically discovers cloud resources and applications running in GCP with deep integration of GCP and AWS.
+     -> with this we can have a core visibility of our services within a minutes.
+     
+     Logging:
+     =========
+     
+    -> Default rentention period is 30-days
+    -> But we can export the logs to Cloud storage, Pub/Sub and Big query
+    
+    Profiling:
+    -> Continuously analyze the performance of CPU or memory intensic=ve fucntions executed across an apps
+    
     
     
     
