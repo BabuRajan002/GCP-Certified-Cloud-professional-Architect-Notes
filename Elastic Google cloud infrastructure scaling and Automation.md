@@ -15,4 +15,4 @@ Supports the below:
 HA VPN (High Availability VPN):
 -------------------------------
 -> Provides 99.99% service availability
-![HA VPN TOPOLOGY!](Images/HA VPN to peer VPN topology.jpg)
+![HAVPNTOPOLOGY!](Images/HA VPN to peer VPN topology.jpg)
