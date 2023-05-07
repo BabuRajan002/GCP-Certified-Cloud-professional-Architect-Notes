@@ -16,3 +16,10 @@ HA VPN (High Availability VPN):
 -------------------------------
 -> Provides 99.99% service availability
 ![HAVPNTOPOLOGY](Images/HA VPN to peer VPN topology.jpg)
+-> To Obtain this High availability we must properly configure the two HA VPN tunnels
+-> It must use the Dynamic BGP routing
+
+Dynamic routung with Cloud routing:
+-----------------------------------
+-> Cloud router uses the BGP routing for the cloud VPN to achieve the dynamic routing
+
