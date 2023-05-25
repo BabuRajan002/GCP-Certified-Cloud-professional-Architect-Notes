@@ -57,6 +57,10 @@ Meet at one of Google's colocation facilities?
 No - Modest bandwidth, short duration, trails
 Yes - Own encryption mechanisms for sensitive traffic
 
+Shared VPC:
+-----------
+-> Sharing the VPC network across the several GCP projects
+-> Enable the VPC peering and private communications across the projects  
 
 
 
