@@ -34,5 +34,29 @@ Partner interconnect:
 ---------------------
 -> It connects our on-prem network to GCP VPC network through a Supported service provider
 -> In order to use we need to work the supported Service provider to connect our VPC network to on prem network
+-> It can be configured 99.99% uptime SLA
+
+Cloud Peering:
+--------------
+1. Direct Peering 
+     Direct Peering, also known as public peering or Internet peering, involves the direct exchange of traffic between two networks at an Internet Exchange Point (IXP) or a peering location. It enables networks to exchange data directly without traversing third-party networks or service providers. Direct Peering is typically used by Internet Service Providers (ISPs), content providers, and large networks to improve network performance, reduce latency, and lower transit costs. It allows for efficient and optimized data routing between networks.
+
+2. Carrier peering
+     Carrier peering in the context of Google Cloud Platform (GCP) refers to the direct interconnection between telecommunication carriers or Internet Service Providers (ISPs) and GCP's network infrastructure. It allows these carriers or ISPs to establish direct peering connections with GCP's global network.
+     
+How to Choose the network between these options?
+================================================
+
+Connect your infra to the cloud? 
+If its workspace Or G-Suite services (Google APIs, YouTube APIs), Choose Direct Peering or Carrier Peering
+
+Extend the reach of your network to Google cloud?
+Choose Interconnect
+
+Meet at one of Google's colocation facilities?
+No - Modest bandwidth, short duration, trails
+Yes - Own encryption mechanisms for sensitive traffic
+
+
 
 
