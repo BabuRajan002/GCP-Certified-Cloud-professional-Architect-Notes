@@ -23,6 +23,10 @@ Dynamic routung with Cloud routing:
 -----------------------------------
 -> Cloud router uses the BGP routing for the cloud VPN to achieve the dynamic routing
 
+Note: BGP explanation:
+-----------------------
+BGP(Border Gateway Protocol) is a routing protocol used on the Internet to exchange routing information between different networks, allowing them to connect and communicate with each other. It determines the best paths for sending data between networks based on various attributes and helps ensure efficient and reliable routing.
+
 Dedicated Interconnect:
 -----------------------
 -> Connecting over the co-location facility where the GCP Peering edge and On-premise router will connect
