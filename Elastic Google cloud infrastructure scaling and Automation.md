@@ -15,7 +15,7 @@ Supports the below:
 HA VPN (High Availability VPN):
 -------------------------------
 -> Provides 99.99% service availability
-![HAVPNTOPOLOGY](Images/HA VPN to peer VPN topology.jpg)
+![Alt text](Images/topology.jpg)
 -> To Obtain this High availability we must properly configure the two HA VPN tunnels
 -> It must use the Dynamic BGP routing
 
