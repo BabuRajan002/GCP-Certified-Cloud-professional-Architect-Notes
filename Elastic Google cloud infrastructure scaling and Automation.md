@@ -67,3 +67,43 @@ Shared VPC:
 -> Enable the VPC peering and private communications across the projects  
 -> When we use shared VPC, designate a project as a Host project and attach one or more service projects
 ![Alt text](Images/shared-vpc-comparison.jpg)
+
+Summary:
+=======
+In below 5 ways we can connect our On-prem to GCP:
+
+1. Cloud VPN
+2. Dedicated interconnect
+3. Direct peering
+4. Carrier Peering
+5. Partner interconnect 
+
+
+Load Balancing and Autoscaling
+===============================
+
+Cloud Load Balancing is a fully distributed software defined managed service. It's not an instance or device. We dont need to manage a physical infrastructure to manage the Load balancing.
+
+Two types of Load balancers offered by GCP:
+
+Global:
+It can be used when our instance or users are Globally distributed.
+
+-> HTTP(s)
+-> SSL Proxy
+-> TCP Proxy
+
+Regional:
+These are internal network load balancer. It distributes the traffic to backend instances which are located in a single region.
+
+-> Internal TCP/UDP
+-> Network TCP/UDP
+-> Internal HTTP(s)
+
+HTTP(s) Load balancer:
+=======================
+
+It uses the round-robin algorithm to distribute the traffic among the backend instances
+
+
+![Alt text](Images/https-load-balancer.jpg)
