@@ -66,4 +66,4 @@ Shared VPC:
 -> Sharing the VPC network across the several GCP projects
 -> Enable the VPC peering and private communications across the projects  
 -> When we use shared VPC, designate a project as a Host project and attach one or more service projects
-
+![Alt text](Images/shared-vpc-comparison.jpg)
