@@ -100,11 +100,24 @@ These are internal network load balancer. It distributes the traffic to backend 
 -> Network TCP/UDP
 -> Internal HTTP(s)
 
-HTTP(s) Load balancer:
+HTTP(s) Load balancing:
 =======================
 
+-> It acts a Layer-7 Application load balancer
+-> HTTP uses port 80 or 8080
+-> Requests are passed to closest instance groups. If there is no closest instance groups requests are passed to next available instance groups.
+-> Cliebt SSL session terminates at the load balancer
 -> It uses the round-robin algorithm to distribute the traffic among the backend instances
 -> Its a Layer-7 Load balancer 
+
+General Overview About HTTP(s) Load balancing:
+===============================================
+Google Cloud HTTP(S) load balancing is implemented at the edge of Google's network in Google's points of presence (POP) around the world. User traffic directed to an HTTP(S) load balancer enters the POP closest to the user and is then load-balanced over Google's global network to the closest backend that has sufficient available capacity.
+
+NEG (Network Endpoint Group):
+=============================
+Configuration object that sepcifies a group of backend endpoints or services.
+-> Common use case for this service is containers
 
 ![Alt text](Images/https-load-balancer.jpg)
 
