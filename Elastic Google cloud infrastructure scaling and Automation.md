@@ -103,7 +103,9 @@ These are internal network load balancer. It distributes the traffic to backend 
 HTTP(s) Load balancer:
 =======================
 
-It uses the round-robin algorithm to distribute the traffic among the backend instances
-
+-> It uses the round-robin algorithm to distribute the traffic among the backend instances
+-> Its a Layer-7 Load balancer 
 
 ![Alt text](Images/https-load-balancer.jpg)
+
+
