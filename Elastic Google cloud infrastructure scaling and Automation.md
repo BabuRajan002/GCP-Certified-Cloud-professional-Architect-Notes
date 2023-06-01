@@ -82,6 +82,8 @@ In below 5 ways we can connect our On-prem to GCP:
 Load Balancing and Autoscaling
 ===============================
 
+![Alt text](Images/https-load-balancer.jpg)
+
 Cloud Load Balancing is a fully distributed software defined managed service. It's not an instance or device. We dont need to manage a physical infrastructure to manage the Load balancing.
 
 Two types of Load balancers offered by GCP:
@@ -119,6 +121,6 @@ NEG (Network Endpoint Group):
 Configuration object that sepcifies a group of backend endpoints or services.
 -> Common use case for this service is containers
 
-![Alt text](Images/https-load-balancer.jpg)
+
 
 
