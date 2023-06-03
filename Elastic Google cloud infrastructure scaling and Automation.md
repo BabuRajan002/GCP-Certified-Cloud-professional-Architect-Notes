@@ -123,8 +123,8 @@ SSL Proxy Load balancing:
 -> Suitable Global load balancing for encrypted, not http traffic
 -> Terminates the SSL session at the load balancing layer
 
-* Important TCP Vs HTTP Vs UDP *:
-=================================
+Important TCP Vs HTTP Vs UDP:
+==============================
 
 * In summary, HTTP is an application-level protocol primarily used for web browsing, while TCP is a lower-level transport protocol responsible for reliable data delivery. TCP provides the underlying infrastructure for HTTP to function effectively and ensure the integrity of data transmission.
 
@@ -157,8 +157,8 @@ Internal Load balancing:
 
 ![Alt text](Images/internal-load-balancing-supports-3-tier-web-services.jpg)
 
-* IMPORTANT Note about RFC1918 IP addresses *:
-===============================================
+IMPORTANT Note about RFC1918 IP addresses:
+==========================================
 
 What is RFC 1918?
 
