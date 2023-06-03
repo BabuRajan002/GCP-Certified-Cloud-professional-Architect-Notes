@@ -116,10 +116,87 @@ General Overview About HTTP(s) Load balancing:
 ===============================================
 Google Cloud HTTP(S) load balancing is implemented at the edge of Google's network in Google's points of presence (POP) around the world. User traffic directed to an HTTP(S) load balancer enters the POP closest to the user and is then load-balanced over Google's global network to the closest backend that has sufficient available capacity.
 
+SSL Proxy Load balancing:
+=========================
+![Alt text](Images/ssl-proxy-load-balancing.jpg)
+
+-> Suitable Global load balancing for encrypted, not http traffic
+-> Terminates the SSL session at the load balancing layer
+
+* Important TCP Vs HTTP Vs UDP *:
+=================================
+
+* In summary, HTTP is an application-level protocol primarily used for web browsing, while TCP is a lower-level transport protocol responsible for reliable data delivery. TCP provides the underlying infrastructure for HTTP to function effectively and ensure the integrity of data transmission.
+
+* In summary, UDP is a connectionless, lightweight protocol that offers fast transmission but does not guarantee delivery or order of packets. It is suitable for applications where speed is prioritized over reliability, and the application itself handles any necessary error checking and packet management.
+
+TCP Proxy load balancing:
+=========================
+
+-> Suitable for un encrypted Global load balancing, not http traffic
+
 NEG (Network Endpoint Group):
 =============================
 Configuration object that sepcifies a group of backend endpoints or services.
 -> Common use case for this service is containers
+
+Network load balancing:
+======================
+-> Regional, non-proxied load balancer
+-> All traffic is passed to the load balancer instead of proxied
+
+Internal Load balancing:
+========================
+
+![Alt text](Images/internal-load-balancing.jpg)
+
+-> Regional, private load balancing
+-> It's a software defined, fully distributed load balancing
+-> In the above diagram, Google cloud directly sends the traffic from client to backend instances instead of establising 
+   two connections like the traditional model.
+
+![Alt text](Images/internal-load-balancing-supports-3-tier-web-services.jpg)
+
+* IMPORTANT Note about RFC1918 IP addresses *:
+===============================================
+
+What is RFC 1918?
+
+RFC 1918 defines private IP addresses that are reserved for use within private networks. These IP addresses are not routable on the public internet. In short, RFC 1918 IP addresses are a set of addresses that are commonly used for internal network configurations, allowing organizations to create their own private networks without conflicting with publicly routable IP addresses.
+
+Who defines these rules? What are the IP ranges?
+
+The ranges for RFC 1918 IP addresses are defined by the Internet Engineering Task Force (IETF), an organization that develops and promotes internet standards. The specific ranges defined by RFC 1918 are as follows:
+
+10.0.0.0 to 10.255.255.255 (10.0.0.0/8)
+172.16.0.0 to 172.31.255.255 (172.16.0.0/12)
+192.168.0.0 to 192.168.255.255 (192.168.0.0/16)
+These address ranges are reserved for private use and should not be used for public internet routing. They are commonly employed in local area networks (LANs), home networks, and within organizations to establish private network environments.
+
+Expansion of RFC ?
+
+RFC stands for "Request for Comments." It is a series of documents that describe various aspects of the Internet, including protocols, procedures, guidelines, and organizational information. RFCs are developed and published by the Internet Engineering Task Force (IETF) to facilitate the open discussion and consensus-building process for internet standards.
+
+The RFC process allows individuals and organizations to propose new ideas, protocols, or modifications to existing standards. These proposals undergo review and discussion within the technical community before being accepted, revised, or rejected. RFCs are assigned unique numbers and are considered the official documents that define internet standards and protocols.
+
+RFCs cover a wide range of topics related to networking, internet protocols, security, programming languages, and more. They serve as a fundamental resource for engineers, researchers, and developers involved in the design, implementation, and maintenance of internet technologies.
+
+It's worth noting that while the name "Request for Comments" may imply a draft or provisional status, many RFCs represent stable and widely adopted standards in the networking field.
+
+Who is that Internet Engineering Task Force(IETF)?
+
+The Internet Engineering Task Force (IETF) is an open, international community of network designers, operators, vendors, and researchers responsible for the development and promotion of internet standards. It is a voluntary organization that operates through a consensus-based approach.
+
+The IETF's primary goal is to ensure the smooth operation and evolution of the internet by fostering the development of high-quality, relevant, and interoperable standards. These standards cover a wide range of areas, including protocols, procedures, security, network management, and more.
+
+The IETF conducts its work through working groups, which focus on specific topics or areas of interest. These working groups consist of volunteers from around the world who collaborate online, participate in mailing lists, attend meetings, and contribute to the development of internet standards.
+
+The IETF is governed by the Internet Society (ISOC), a non-profit organization that provides financial and legal support to the IETF's activities. The Internet Architecture Board (IAB) serves as an advisory body to the IETF, providing guidance on technical and architectural matters.
+
+Overall, the IETF plays a crucial role in shaping the future of the internet by developing and maintaining the standards that enable global connectivity, interoperability, and innovation.
+
+
+
 
 
 
