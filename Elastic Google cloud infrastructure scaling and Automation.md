@@ -203,6 +203,39 @@ Summary of Load balancers:
 
 ![Alt text](Images/choice-of-loadbalancers-flowchart.jpg)
 
+=========================================================================================================================
+
+Module 2 (Infrastructure As a Code):
+=====================================
+
+Terraform:
+----------
+-> It uses the Hashicorp Configuration Language (HCL)
+-> Terraform is already installed in Cloud Shell
+
+terraform init --> Command should run where the main.tf file is present. It downloads the dependencies based the provider we mentioned in the main.tf file. It downloads the all the necessary plugins and store in the sub-folder.
+
+terraform plan --> It's a refresh command goes through the configuration files and decide what actions are necessary to achieve the desired state.
+
+terraform apply --> It will create the infrastructure defined in the configuration file. Once this command completed 
+we will able to see the infra created in the GCP.
+
+Cloud Dataflow:
+===============
+
+![Alt text](Images/cloud-dataflow.jpg)
+
+Cloud Data prep:
+================
+
+-> To visually explore, clean, and prepare date for analysis and ML
+
+Cloud Dataproc:
+===============
+
+-> Dataproc is a service for running Apache spark and Apache Hadoop clusters
+
+
 
 
 
