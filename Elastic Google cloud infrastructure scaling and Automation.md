@@ -195,8 +195,13 @@ The IETF is governed by the Internet Society (ISOC), a non-profit organization t
 
 Overall, the IETF plays a crucial role in shaping the future of the internet by developing and maintaining the standards that enable global connectivity, interoperability, and innovation.
 
+How do you choose a Load balancers?
 
+![Alt text](Images/choice-of-loadbalancers-flowchart.jpg)
 
+Summary of Load balancers:
+
+![Alt text](Images/choice-of-loadbalancers-flowchart.jpg)
 
 
 
