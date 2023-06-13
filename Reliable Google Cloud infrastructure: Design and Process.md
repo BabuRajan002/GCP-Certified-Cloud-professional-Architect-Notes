@@ -56,4 +56,26 @@ SLI - Is a measurable attribute of a service. Such as latency of service, throug
 SLO - Its a targeted range of values measured by SLIs ex: Average latency of a service should be less than 100ms.
 SLA - Its most restrictive version of SLOs. A contract between the customers and the service providers. Providing the    compensation if the service doesn't meet the specific expectations.
 
+ ![Alt text](Images/activity-review-SLI-and-SLO.jpg)
+
+ ========================================================================================================================
+
+ Microservices:
+ ==============
+
+ Twelve factor App:
+ ==================
+
+ * Maximize the portability
+ * Deploy to the cloud
+ * Enable continuous deployment
+ * Scale easily
+
+ 1st Factor --> Code base
+ 2nd Factor --> Declare the dependencies in the codebase, such as the package manager like Maven, Pip, NPM.
+ 3rd Factor --> Configs. These are environment related configs such as tokens, db username, passwords, strings,        endpoints etc.. This should not be stored in source code.
+ 4th Factor --> Backing services, Treat backing services as a attached resources. Such Databases, caches, queues and other services are accessed via URLs. It can be easily swapped to implement the other one.
+ 5th Factor --> Build, release and run. 
+
+
 
