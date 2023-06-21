@@ -71,11 +71,27 @@ SLA - Its most restrictive version of SLOs. A contract between the customers and
  * Enable continuous deployment
  * Scale easily
 
- 1st Factor --> Code base
+ 1st Factor --> Code base should be tracked in Version control system.
  2nd Factor --> Declare the dependencies in the codebase, such as the package manager like Maven, Pip, NPM.
  3rd Factor --> Configs. These are environment related configs such as tokens, db username, passwords, strings,        endpoints etc.. This should not be stored in source code.
  4th Factor --> Backing services, Treat backing services as a attached resources. Such Databases, caches, queues and other services are accessed via URLs. It can be easily swapped to implement the other one.
  5th Factor --> Build, release and run. 
+ 6th Factor --> Processes. Execute the app as one or more stateless processes.
+ 7th Factor --> Export the services via port binding
+ 8th Factor --> Scale out. Apps are running self-contained and run in seprate processes, they scale easily by adding instances
+ 9th Factor --> Easy disposability, for an example if an instance is not needed, you should be able to turn it off with no side effects.
+10th Factor --> Keep the dev, prod environment as similar as possible
+11th Factor --> Write the log messages to standard output and aggregate all logs to a single source.
+12th Factor --> Admin processes. Run the admin/management tasks as one off processes. 
 
+REST Architecture supports loose coupling:
+===========================================
 
+REST Stands for - Representational State Transfer
+-> Protocol independent 
+-> Most commonly used is HTTP
+-> other possible is gRPC
 
+-> Service endpoints which are supporting REST is RESTful
+
+-> Passing representations between services is done using standard text-bases formats which is json, HTML, XML and csv.
