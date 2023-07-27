@@ -168,3 +168,29 @@ Partner interconnect:
 
 ![Alt text](Images/partner-interconnect.jpg)
 
+Security:
+=========
+
+-> Security command center provides access to organizational and project security configuration
+-> It will help us to show any threat detection/Anomaly detection/security health analysis
+
+Network Security:
+=================
+
+-> Remove the external IPs to prevent access to machines outside of their network
+-> Can also use IAP to ssh into internal machines
+-> Use cloud NAT to provide egress to the internet from internal machines
+
+Note: All the internet traffic should terminate at a load balancer, third-party firewall (proxy or WAF), API Gateway, OR IAP. That way, 
+internal services cannot be launched and get public IP addresses.
+
+Private Access:
+
+-> It allows to the Google services using an internal address.
+-> Need to enable this when creating the subnets
+
+
+![Alt text](Images/cloud-armor-custom-vpc.jpg)
+
+
+![Alt text](Images/cloud-armor-https-lb-with-on-prem.jpg)
