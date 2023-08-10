@@ -31,6 +31,9 @@ Def: Regional load balancers are External/Internal load balancers
 -> Regional External HTTP(s) Load Balancing
 -> Internal HTTP(s) Load Balancing --> It's proxy based internal Layer-7 Load balancer
 -> Internal TCP Proxy Load Balancing
+   * Regional, private load balancer
+   * RFC 1918 IP addresses
+   * Its a software defined fully distributed LOad balancer
 -> Internal TCP/UDP Load Balancing
 -> External TCP/UDP Network Load balancing
 -> External TCP Proxy load balancing
