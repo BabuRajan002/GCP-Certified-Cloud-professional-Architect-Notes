@@ -38,4 +38,25 @@ Def: Regional load balancers are External/Internal load balancers
 -> External TCP/UDP Network Load balancing
 -> External TCP Proxy load balancing
 
+Different Deployment strategies:
+================================
+
+Blue/Green:
+-----------
+-> Only one version is live at a time
+-> Once the green (new version) deployed and tested, when it is stable traffic will be routed.
+-> There is no downtime
+-> Blue version is kept for sometime for possible rollback.
+
+Canary deployment:
+------------------
+-> Deploy the new version, next to the old one
+-> Subset of production traffic will be sent to this new version to evaluate its performance
+-> Benefit of this pattern is that you are testing it against the production traffic
+
+A/B testing:
+------------
+-> It is closer to the canary testing
+-> Measure the effectiveness of proposed changes
+-> Canary is concerned with production performance where as A/B is more concerned with the new features.
 
