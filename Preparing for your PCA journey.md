@@ -8,6 +8,8 @@ Course Agenda:
 6. Managing Implementation and Ensuring solution and operations reliability
 7. Case study preparation and your next steps
 
+Cloud Storage:
+===============
 
 ![Alt text](Images/courses-skill-badges.jpg)
 
@@ -60,3 +62,21 @@ A/B testing:
 -> Measure the effectiveness of proposed changes
 -> Canary is concerned with production performance where as A/B is more concerned with the new features.
 
+Cloud Armor Overview: (Content from YouTube: https://www.youtube.com/watch?v=oXJ68Sa8jfU)
+=====================
+
+-> Mitigate the volumetric DDoS aatcks - Across all the global load balancers
+-> WAF - to help defend against application layer attacks
+-> Filter the traffic based on IP, Geo and custom matcg parameters
+-> Telemetry - Cloud logging, Cloud Monitoring and Security command Center
+
+DDoS Attack:
+
+Imagine you're trying to visit a website, but instead of just you, a huge crowd of people all try to visit the website at the same time. This overwhelming number of visitors can make the website so busy that it can't handle everyone's requests, causing it to slow down or even crash.
+
+A Distributed Denial of Service (DDoS) attack is like that crowd of people, but it's not actual people. Instead, it's a bunch of computers or devices working together to flood a website or online service with so much traffic that it becomes really hard or even impossible for that website to work properly. It's like making the website feel sick because it's being bombarded with too much information all at once.
+
+![Alt text](Images/network-security-defense-in-path.jpg)
+
+
+![Alt text](Images/network-security-overview.jpg)
