@@ -80,3 +80,40 @@ A Distributed Denial of Service (DDoS) attack is like that crowd of people, but 
 
 
 ![Alt text](Images/network-security-overview.jpg)
+
+Storage and Databases services:
+===============================
+
+![Alt text](Images/storage-databases-services.jpg)
+
+Cloud Storage classes:
+======================
+
+Standard
+--> Hot data and stored for only brief periods of time like data intensive computations
+--> No Min storage time
+--> Retrival cost none
+--> SLA is 99.95%(Multi)
+--> SLA is 99.90% for regional
+
+Nearline:
+--> Infrequently accessed data like data backup
+--> long-tail multinedai content and data archiving
+-> Min Sto: 30days
+-> Cost: 0.01 per GB
+
+Coldline:
+--> Infrequently accessed data.
+--> Min sto: 90days
+
+Archive:
+--> Data archiving, online backup and DR
+--> Min Sto: 365 days
+
+How do you choose the storage class?
+
+![Alt text](Images/choosing-a-storageclass.jpg)
+
+File Store:
+===========
+--> Fully managed network attached storage (NAS) for compute engines and GKE instances

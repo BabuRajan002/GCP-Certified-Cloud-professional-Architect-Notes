@@ -39,17 +39,23 @@ There are three types of IAM roles:
    * Editor
    * Viewer
    * Billing administrator
+     -> Manage billing 
+     -> Add or remove the Administrators 
 -> Predefined
+   * It gives a more granular way of access to the specific google resources.
+   * It contains the collection of permissions
+
 -> Custom
    * Creating our own custom roles with set of permissions and it is not maintained by GCP, which means our custom roles will not be updated, 
    modified and deleted automatically
+   * Custom roles enables the least privillege option. It allows us to create the role with more granular way
    
    Members:
    
    There are Five types of members in GCP
    1. Google account
    2. Service Account
-   3. google group ---> Collection of users group and we can assign roles/permissions to that entire group.
+   3. google group ---> Collection of users group and we can assign roles/permissions to that entire group. Named collection of goole accounts and service accounts.
    4. Cloud Identity
    5. Google workspace domain ---> Virtual group created for all the user accounts created in organization. 
      
@@ -75,6 +81,19 @@ There are three types of IAM roles:
       - Name has -compute suffix
     - Role is "project editor"
     - by default its enabled on all instances creates using gcloud or google cloud console
+    - Built-in service accounts are Compute Engine and App engine
+
+    Google APIs Service account:
+    - Runs internal Google processes on your behalf
+
+    IAM Best practices:
+    ===================
+    - Check the policy granted on each resource and make sure you understand the inheritance
+    - Use the principles of least privilege when granting roles
+    - Granting the roles to the groups instead individuals
+    - Be very careful while using the service acocunt user role. Because the user/group gains all the access which the service account has
+    - Enable IAP for applcations which are accessed using the https
+
     
     Identity Aware proxy:
     ======================
