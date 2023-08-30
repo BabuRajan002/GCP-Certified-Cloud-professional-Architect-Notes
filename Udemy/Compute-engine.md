@@ -165,6 +165,31 @@ Anthos:
 -> In case if we are running our Kubenetes cluster in on-premise we can use Anthos. 
 -> To deploy those Anthos clusters we can use cloud Run
 
+IAM Role:
+=========
+-> A Set of permissions (to perform specific actions on specfic resources)
+-> A role do not about the members its all about the permissions
+
+Policy:
+-> Defines the binding a role to a member.
+
+Three Types of roles:
+
+1. Basic Roles - Owner/Editor/Viewer
+----------------------------------
+Owner - Editor + Manage roles and permissions + Billing
+Editor - Viewer + Edit actions
+Viewer - Read + Only actions
+
+2. Predefined role:
+-------------------
+Fine grained roles predefined and managed by google
+
+3. Custom roles:
+----------------
+When predefined roles are not sufficient, you can create your own roles
+
+
 
 
 
