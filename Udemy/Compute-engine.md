@@ -189,6 +189,36 @@ Fine grained roles predefined and managed by google
 ----------------
 When predefined roles are not sufficient, you can create your own roles
 
+Service accounts:
+=================
+
+ACL - Defines who access to your buckets and objects, as well as what level of access they have
+
+How is this differ from IAM?
+-> IAM permissions applies all the objects present in the bucket
+ACL
+-> Can be used to customized specific accesses to different objects.
+
+Two Types of access in Cloud storage:
+=====================================
+
+Uniform - Apply the IAM permissions to the bucket level , NO ACls enabled
+Fine grained - No bucket level permission and ACLs enabled.
+
+Cloud Storage - Signed URL:
+===========================
+
+-> When we want to allow a user limited time access to your objects we can go with the signed URLs.
+-> User do NOT need Google accounts
+
+How to create a Signed URL?
+1. Create a key (User Managed Key) for the service account/user with the desired permissions
+2. create a signed URL with the key:
+    * gsutil signurl -d 10m key gs://BUCKET_NAME/OBJECT_PATH
+
+
+
+
 
 
 
