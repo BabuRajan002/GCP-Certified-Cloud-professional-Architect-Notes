@@ -216,8 +216,19 @@ How to create a Signed URL?
 2. create a signed URL with the key:
     * gsutil signurl -d 10m key gs://BUCKET_NAME/OBJECT_PATH
 
+How do we measure how quickly we can recover from failure?
+-> RPO - (Recovery Point Objective): Max acceptable period of data loss
+-> RTO - (Recovery Time Objective): Max acceptable downtime
 
+CloudSQL Best practices:
+=========================
+* Use cloudSQL proxy:
+ -> Securely connect to the cloudSQL instances using this cloud-sql-proxy from the apps (App engine, Cloud Functions,
+ Cloud RUN and GKE)
+* Understand the scalability
+  -> Enable HA configuration for HA
 
+* CloudSQL does cannot scale horizontally for writes
 
 
 
