@@ -230,6 +230,108 @@ CloudSQL Best practices:
 
 * CloudSQL does cannot scale horizontally for writes
 
+NoSQL Databases:
+=================
+
+* Firestore Database:
+   -> Native mode - Advanced mode 
+   -> Datastore mode - Good for old datastores
+
+Collection:
+-> Group of documents
+
+Document:
+-> A document contains the actual data
+-> Inside a document we can add another collection 
+
+Collection ---> Documents ----> Collection
+
+Collection contains documents and document contains collections.
+
+Use cases: 
+i) Recommended for storing the things like user profiles
+ii) Index for objects stored in the cloud storage
+    -> Allow the users to upload their profile pics in the cloud storage
+    -> Enable the quick search by storing the metadata (like ids and cloud storage bucket, object details) in the cloud datastore.
+
+Cloud BigTable:
+===============
+
+* Peta byte scale, wide column database NoSQL DB (Hbase API compatible).
+* Designed for huge volumes of analytical and ops data
+* IOT Streams, Analytics, Time series data etc
+* Not serverless, we need to create a server instance (Use SSD and HDD).
+* Use cloud dataflow to export the data from Bigtable to cloud storage
+* Cloud Bigtable is a key/value store
+* Each table has ONLY ONE index, the row key
+
+Networking in GCP:
+==================
+
+* VPC is a Global resource, Subnets are tied with one or more regions.
+* LOad balancers are accessible from internet (Public resources)
+
+Modes:
+- Auto mode - Subnets will be created in every region
+- Custom mode - Allows us to create the subnets to the specifc regions we want.
+
+*** Important: Auto mode network can be converted into custom mode network, but the reverse is not possible ***
+
+Enable Private access when you create a Subnet inside the VPC
+
+-> Allows the VM to coonnect to Google APIs using private IPs
+
+*** Note: Instances created in Custom network will not talk to the instances created in the default network. ***
+
+Firwall Rules:
+===============
+-> Stateful - By default if the incoming traffic is allowed the outgoing traffic is also allowed. 
+-> Each firewall rule has priority (0-65535) assigned to it
+-> 0 highest priority. 65535 has least priority
+-> Default implied rule with the lowest priority 65535
+   * Allow all egress 
+   * deny all ingress
+   * default rules can't be deleted
+   * you can override the default rules by defining new rules with priority between 0-65534
+-> Default VPC has 4 additional rules with priority 65534
+   * Allow incoming traffic from VM instances in same network (default-allow-internal)
+   * Allow incoming TCP traffic on port 22 SSH default-allow-ssh
+   * Allow incoming TCP traffic 3389 RDP default-allow-rdp
+   * Allow incoming ICMP from any source on the network default-allow-icmp
+
+*** Note: By default all the egress traffic from the VM instances is allowed ***
+
+Subnets:
+========
+
+4 IP addresses reserved
+
+-> 1st IP - Network addr
+-> 2nd IP - Gateway addr
+-> 3rd IP - second to Last and last addresses reserved for broadcase addr
+
+Internal and External IP addresses:
+===================================
+
+internal IP - Assigned from the IP ranges from the VPC subnet
+external IP - external IP will be assigned either from default pool or from it canbe reserved
+
+-> VM's OS doesn't know about the external IP. IP mapping will be taken care by VPC
+-> Each instance has a metadata server 169.254.169.254 
+-> Name resolution is handled by internal DNS server
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
