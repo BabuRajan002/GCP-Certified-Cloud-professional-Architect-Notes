@@ -320,6 +320,38 @@ external IP - external IP will be assigned either from default pool or from it c
 -> Each instance has a metadata server 169.254.169.254 
 -> Name resolution is handled by internal DNS server
 
+Cloud Trace:
+============
+
+-> Trace the requests across multiple micro-services
+-> Trace the requests across multiple Google services
+
+Find out:
+=========
+* How long does a service take to handle requests.?
+* Whats the average latency?
+* How are we doing the over a time period?
+
+Cloud Debugger:
+===============
+* Captures the state of a running application
+* Inspect the state of the application directly in the GCP environment
+* Take snapshots of variables and call stack
+
+Cloud Profiler:
+===============
+
+-> To identify the performance bottlenecks in production
+-> Continuously gathers CPU and Memory usage from production systems
+
+Two Major components:
+=====================
+-> Profiling agent (Collects the profiling info)
+-> Profiler interface (visualization)
+
+Error reporting:
+================
+
 
 
 
