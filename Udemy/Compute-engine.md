@@ -349,8 +349,26 @@ Two Major components:
 -> Profiling agent (Collects the profiling info)
 -> Profiler interface (visualization)
 
-Error reporting:
+Cloud Pub/Sub:
+==============
+-> Add Cloud Dataflow to enable message deduplication (exactly once processing)
+
+Cloud Dataflow:
 ================
+-> Dataflow provides unified streaming and batch processing that's serverless fast and cost effective.
+-> Its based on Apache Beam
+
+Few example use cases below for data streaming:
+- Pub/sub --> Dataflow --> BigQuery (streaming)
+- Pub/Sub --> Dataflow --> Cloud Storage (Streaming-files)
+
+example for batch processing:
+
+- Cloud storage --> Dataflow --> Bigtable/Cloud Spanner/Datastore/Bigquery (Batch - Load data into databases)
+- Convert file formats between Avro, Parquet & csv
+
+
+
 
 
 
