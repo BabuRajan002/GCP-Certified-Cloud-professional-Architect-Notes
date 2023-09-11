@@ -367,6 +367,95 @@ example for batch processing:
 - Cloud storage --> Dataflow --> Bigtable/Cloud Spanner/Datastore/Bigquery (Batch - Load data into databases)
 - Convert file formats between Avro, Parquet & csv
 
+Cloud VPN:
+==========
+
+Classic:
+-> Cloud VPN securely connects your on-premises network to your Google cloud VPC network
+-> Data transfers using public internet
+-> Data will be encrypted in one VPN gateway and decrypted in another VPN gateway
+-> Useful for low volume data connections
+
+HA VPN:
+-> SLA 99.99% service availability
+-> Automatically propagate the network configuration changes from one network to other network Cloud VPN gateway uses the cloud router to establish the BGP session
+
+Cloud Interconnect:
+===================
+
+Dedicated:
+1. Direct Peering
+2. Dedicated Interconnect
+
+It uses VLAN that directly pipes the connection to our On-premise network in the RFC1918 addr space
+
+Shared:
+1. Carrier Peering
+2. Partner Interconnect
+
+Cloud VPN:
+-> It uses the Public internet to route the traffic. But the traffic is encrypted
+
+VPC Peering:
+-> Connecting the two VPC networks either they are in same organization or different. 
+-> Both the VPC network's network admins has to establish the connectivity. 
+-> Communication will happen using RFC1918 private IP address ranges
+
+Cloud DNS:
+===========
+Zones:
+-> Zone is a container for records
+-> There are public and private managed DNS zones
+
+Anthos:
+=======
+-> When our K8s clusters running in different cloud providers and on-premises, we can easily manage them with Anthos
+-> Consistent development and Ops experience
+-> Centralized config management - Git repo
+-> Provides service mesh (based on Istio)
+
+Cloud Identity platform:
+========================
+
+-> Want to manage end users of my application?
+-> I want to enable "Login using facebook/twitter" for my application
+-> I want to create user sign-up and sign-in workflows for my application
+
+Event Driven architecture using eventarc:
+=========================================
+
+-> Microservices communicate through events instead of calling each other.
+-> Microservices calling each other using event manager
+
+Observability and OpenTelemetry:
+================================
+
+"Measure the internal state of a system by examining its outputs"
+
+Goal: Proactively identify problems and fix them
+
+3 Pillars of observability: Logs, metrics and traces
+
+Service Discovery:
+=================
+
+-> Help microservices find one another
+Service directory: 
+-> A single place to publish, discover and connect services
+
+Big Query:
+=========
+
+> Big query Hierarchy: Datasets --> Tables ---> Partitions
+> We need to pay for the query scanning the entire table or datasets and amount of data we are storing
+> Its better to set a expiry date for a date 
+> Write a query more efficiently using partioning and clustering
+
+Import Data into Bigquery:
+==========================
+
+-> Importing data into Bigquery is FREE. We are only paying for its storage or amount of data.
+-> Import data after processing by Cloud Dataflow and cloud dataproc(Managed Hadoop service)
 
 
 
