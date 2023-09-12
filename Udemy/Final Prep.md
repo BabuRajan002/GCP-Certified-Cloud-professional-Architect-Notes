@@ -457,6 +457,16 @@ Import Data into Bigquery:
 -> Importing data into Bigquery is FREE. We are only paying for its storage or amount of data.
 -> Import data after processing by Cloud Dataflow and cloud dataproc(Managed Hadoop service)
 
+Data Lifecycle:
+===============
+
+Four steps:
+
+Ingest: Stream or Batch ingest
+Store: Durably and cost efficiently store data in a convenient format
+Process and analyze: Concert data to information 
+Explore and visualize: Flexibility to play with data/info, Get and share insights
+
 
 
 
