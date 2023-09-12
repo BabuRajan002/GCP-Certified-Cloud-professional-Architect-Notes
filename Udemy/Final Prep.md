@@ -467,8 +467,39 @@ Store: Durably and cost efficiently store data in a convenient format
 Process and analyze: Concert data to information 
 Explore and visualize: Flexibility to play with data/info, Get and share insights
 
+Data lifecycle-3 - Process and analyze:
+========================================
 
+-> Raw Data >> Actionable information (Clean, Transform)
 
+Data prep:
+
+-> Clean and Prepare data
+-> Fully managed, No-Ops
+Use cases: Clean data on-boarded from external sources, Prepare data for ML visual approach for non programmers
+
+Cloud Data Loss Prevention:
+Scan, discover, classify and report on data in the cloud storage, bigquery and datastore
+
+Dataproc:
+-> Complex processing using Spark and Hadoop
+-> Needs a cluster with compute engine and VMs
+use cases: ML, Migrate existing Spark and Hadoop workloads.
+
+Data lifecycle4 - Explore and visualize:
+========================================
+Cloud Data studio - Dashboarding and visualization
+ Live charts and graphs based on data in cloudSQL and Bigquery
+
+Big data & Analytics in GCP:
+============================
+
+Cloud Composer - Used to create a workflow services between other clouds, on-premise data centers
+
+Data Lake:
+=========
+
+-> Solution for complex things of Big data
 
 
 
