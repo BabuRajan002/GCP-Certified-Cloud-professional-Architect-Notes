@@ -501,6 +501,88 @@ Data Lake:
 
 -> Solution for complex things of Big data
 
+Release Management:
+===================
+
+1. Deployment Method: Recreate
+
+Approach:
+* Terminate V1 & rollout V2
+
+Characterstics:
+* App will be down during the release
+* Roll back needs redeployment and it requires more downtime
+* Cost effective and fast. No need of additional infra required
+
+2. Deployment Method: canary
+
+Approach:
+* v2 rolledout to a subset of instances
+* On successful testing, v2 rolled out to all instances
+* Some percentage of production traffic will be passed to the V2 subsets of instances
+
+Characterstics:
+* Fast
+* Zero downtime
+* No extra infra
+* Minimizes impact to users (incase of release failures)
+* Needs backward compatibility(data and applications) - Since we are running both the versions of application sametime
+
+3. Deployment Method: A/B testing
+
+Approach:
+* V2 (with a new feature) rolled out to a subset of users
+* On successful testing, V2 rolled out to all users or we can roll it back
+
+Characterstics:
+* Gives the ability to test if your users like a feature
+
+4. Deployment Method: Rolling
+
+Approach:
+* V2 rolled out to a percentage of instances (example window size 5%)
+* V2 gradually rolled out to rest of the instances 
+
+Characterstics:
+* Slow
+* Zero downtime
+* Needs automation and additional setup
+* no extra infra
+* Minimizes impact to users
+* needs backward compatibility
+
+5. Deployment Method: Rolling with additional batch
+
+Approach:
+* Additional batch of new instances are created with V2
+
+Characterstics:
+* Same as rolling deployment but it needs bit if extra infrastructure
+
+6. Deployment Method: Blue Green deployment
+
+Approach:
+* Create a parallel environment with V2 and test it
+* Once testing is done, switch all the traffic from V1 to V2 and remove v1
+
+Characteristics:
+* Instant
+* Zero downtime
+
+6. Deployment Method: Shadow
+
+Approach:
+* V1 is live, create a parallel environment with v2 and mirror the traffic to V1 and V2
+
+Characteristics:
+-> Zero production impact. Test V2 with real prod traffic before releasing
+-> You can also capture and replay live production traffic
+
+
+
+
+
+
 
 
 
