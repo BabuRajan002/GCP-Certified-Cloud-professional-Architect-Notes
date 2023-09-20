@@ -488,8 +488,11 @@ use cases: ML, Migrate existing Spark and Hadoop workloads.
 
 Data lifecycle4 - Explore and visualize:
 ========================================
-Cloud Data studio - Dashboarding and visualization
+-> Cloud Data studio - Dashboarding and visualization
  Live charts and graphs based on data in cloudSQL and Bigquery
+
+-> Cloud Bigquery - Managed data warehouse Standard SQL, serverless, separate storage and compute
+-> Cloud datalab - Web based tool to prepare, analyze and visualize data based on Jupyter notebooks.
 
 Big data & Analytics in GCP:
 ============================
@@ -578,10 +581,19 @@ Characteristics:
 -> Zero production impact. Test V2 with real prod traffic before releasing
 -> You can also capture and replay live production traffic
 
+Transferring data to cloud:
+============================
+Storage transfer service:
+-> Recommended for large scale petabytes online data transfers from your private data centers, AWS, Azure and Google cloud
+-> Supports incremental transfer 
 
+gsutil:
+-> gsutil is only recomended only when you are transferring less than 1TB from on-premise or another GCS bucket.
 
-
-
+Dataprep
+App engine and cloud datastore indexes
+Cloud Deployment manager
+About Org policy
 
 
 
